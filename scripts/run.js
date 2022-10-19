@@ -5,13 +5,9 @@ const deployContract = async () => {
     console.log("Contract deployed to:", nftContract.address);
 
     // Call the function
+    // Could easily change this to a loop for as many as I want
     let txn = await nftContract.makeJSNFT()
     // Wait to be mined
-    await txn.wait()
-
-    // Mint another NFT just because
-    // Could easily change this to a loop for as many as I want
-    txn = await nftContract.makeJSNFT()
     await txn.wait()
   };
 

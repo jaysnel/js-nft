@@ -25,16 +25,13 @@ contract JSNFT is ERC721URIStorage {
         // Actually mint the NFT to the sender using msg.sender.
         _safeMint(msg.sender, newItemId);
 
-        // Set the NFTs data.
-        _setTokenURI(newItemId, 'https://jsonkeeper.com/b/BRMZ');
-        console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
         // Increment the counter for when the next NFT is minted.
         _tokenIds.increment();
     }
-
+    // Set the NFT's metadata
     function tokenURI(uint256 _tokenId) public view override returns (string memory) {
         require(_exists(_tokenId));
-        console.log("An NEW NFT SVG w/ ID %s has been minted to %s", _tokenId, msg.sender);
+        console.log("An NFT SVG w/ ID %s has been minted to %s", _tokenId, msg.sender);
         return string(
             abi.encodePacked(
                 "data:application/json;base64",
