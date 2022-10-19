@@ -28,6 +28,7 @@ contract JSNFT is ERC721URIStorage {
         // Increment the counter for when the next NFT is minted.
         _tokenIds.increment();
     }
+    
     // Set the NFT's metadata
     function tokenURI(uint256 _tokenId) public view override returns (string memory) {
         require(_exists(_tokenId));
