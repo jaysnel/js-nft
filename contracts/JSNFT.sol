@@ -27,6 +27,10 @@ contract JSNFT is ERC721URIStorage {
         uint256 newItemId = _tokenIds.current();
         // Actually mint the NFT to the sender using msg.sender.
         _safeMint(msg.sender, newItemId);
+
+        // THIS IS THE LINE I NEEDED?!?!?!! NO WAY...
+        _setTokenURI(newItemId, _nftJsonData);  
+        
         // Increment the counter for when the next NFT is minted.
         _tokenIds.increment();
     }

@@ -10,9 +10,9 @@ const deployContract = async () => {
 
     let itemID = 0
     while(itemID <= aiImages.length - 1) {
+      await nftContract.setNFTData(itemID, aiImages[itemID])
       let txn = await nftContract.makeJSNFT()
       await txn.wait()
-      await nftContract.setNFTData(itemID, aiImages[itemID])
       await nftContract.tokenURI(itemID)
       itemID++;
     }
