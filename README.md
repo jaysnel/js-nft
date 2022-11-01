@@ -11,11 +11,13 @@ Note: NFT items must follow OpenSea Meta data requiremnets for NFT to mint corre
 4. Alchemy API URL
 
 ### Steps
-Create your json object
-Stringify and replace `aiImages` variable in deploy.js
+> Create your json object
+> Stringify and replace `aiImages` variable in deploy.js
 
 Run:
 ```
 yarn install
 npx hardhat run scripts/deploy.js --network goerli
 ```
+> Wait for script to finish
+> Take deployed contract that gets logged out and search for it on (https://testnets.opensea.io/)
