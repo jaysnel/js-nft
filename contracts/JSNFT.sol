@@ -11,6 +11,7 @@ import "hardhat/console.sol";
 contract JSNFT is ERC721URIStorage {
     uint256 _user_nft_number;
     string _nftJsonData;
+    uint256 _nft_total_count = 0;
 
     // Magic given to us by OpenZeppelin to help us keep track of tokenIds.
     using Counters for Counters.Counter;
@@ -38,6 +39,11 @@ contract JSNFT is ERC721URIStorage {
     function setNFTData(uint256 _itemID, string memory _nftData) public {
         _user_nft_number = _itemID;
         _nftJsonData = Base64.encode(bytes(_nftData));
+        _nft_total_count = _nft_total_count + 1;
+    }
+
+    function getTotalNftCount() public view returns(uint) {
+        return _nft_total_count;
     }
 
     // Set the NFT's metadata
