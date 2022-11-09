@@ -10,9 +10,7 @@ Note: NFT items must follow OpenSea Meta data requiremnets for NFT to mint corre
 3. Alchemy account
 4. Alchemy API URL
 
-### Steps
-> Create your json object
-> Stringify and replace `aiImages` variable in deploy.js
+### UI for simple NFT Minter coming soon
 
 Run:
 ```
