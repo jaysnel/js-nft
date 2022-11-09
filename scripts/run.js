@@ -10,14 +10,9 @@ const deployContract = async () => {
 
     let itemID = 0
     while(itemID <= aiImages.length - 1) {
-      await nftContract.setNFTData(itemID, aiImages[itemID])
-      let txn = await nftContract.makeJSNFT()
-      await txn.wait()
-      let data = await nftContract.tokenURI(itemID)
-      console.log(data)
-      // let data = await nftContract.getNFTData();
-      // console.log(data[0][0])
-      // console.log('Minted NFT #%s with data: %s', itemID, aiImages[itemID])
+      await nftContract.makeJSNFT(itemID, aiImages[itemID]);
+      let currentToken = await nftContract.tokenURI(itemID);
+      console.log('Current Token Data: ', currentToken);
       itemID++;
     }
   };
