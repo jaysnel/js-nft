@@ -1,4 +1,4 @@
-### JS-NFT
+### SimpleNFTCreator
 Easy solution to deploy your NFT's.
 
 This project is used to deploy your NFT's to the goerli network. You can send an array of items to mint and allow the code to run and deploy to OpenSea test net.
