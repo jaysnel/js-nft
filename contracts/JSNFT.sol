@@ -26,7 +26,7 @@ contract JSNFT is ERC721URIStorage {
     Counters.Counter private _tokenIds;
 
     // We need to pass the name of our  NFTs token and its symbol.
-    constructor() ERC721 ('jsNFT', 'JSNFT') {
+    constructor() ERC721 ('SimpleNFTCreator', 'SNFTC') {
         console.log('NFT contract deployed');
     }
 
@@ -44,7 +44,7 @@ contract JSNFT is ERC721URIStorage {
     }
 
     // A function our user will hit to get their NFT.
-    function makeJSNFT(uint256 _itemID, string memory _nftData) public {
+    function makeSimpleNFT(uint256 _itemID, string memory _nftData) public {
         addNFT(_itemID, _nftData);
         
         // Get the current tokenId, this starts at 0.
