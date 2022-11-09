@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/utils/Base64.sol";
 
 
 
-contract JSNFT is ERC721URIStorage {
+contract SimpleNFTCreator is ERC721URIStorage {
     string _nftJsonData;
     
     struct NFT_ {
