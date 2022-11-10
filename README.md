@@ -10,7 +10,8 @@ Note: NFT items must follow OpenSea Meta data requiremnets for NFT to mint corre
 3. Alchemy account
 4. Alchemy API URL
 
-### UI for simple NFT Minter coming soon
+### UI for simple NFT Minter
+https://simple-nft-creator.netlify.app/
 
 Run:
 ```
